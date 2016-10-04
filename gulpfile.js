@@ -4,15 +4,6 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var inject = require('gulp-inject');
 var wait = require('gulp-wait');
-// var browserSync = require('browser-sync').create();
-
-// gulp.task('browserSync', function() {
-//   browserSync.init({
-//     server: {
-//       baseDir: 'server.js'
-//     }
-//   });
-// });
 
 gulp.task('sass', function() {
   return gulp.src('./public/sass/*.scss')
@@ -22,9 +13,6 @@ gulp.task('sass', function() {
       outputStyle: 'expanded'
     }).on('error', sass.logError))
     .pipe(gulp.dest('./public/css'))
-    // .pipe(browserSync.reload({
-    //   stream: true
-    // }))
 });
 
 gulp.task('index-load', function() {
