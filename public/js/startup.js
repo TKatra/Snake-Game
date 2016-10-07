@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   document.body.appendChild(renderer.view);
 
   renderer.view.style.border = "1px dashed black";
+  renderer.backgroundColor = 0x061639;
 
   loader
     .add("assets/images/snake-game.json")
@@ -25,8 +26,17 @@ function setup() {
   snok.vx = 0;
   snok.vy = 0;
 
+  rectangle = new Graphics();
+  rectangle.beginFill(0x66CCFF, 0.5);
+  rectangle.lineStyle(2, 0xFF3300, 1);
+  rectangle.drawRect(0, 0, 10, 10);
+  rectangle.x = 300;
+  rectangle.y = 150;
+  rectangle.endFill();
+
   stage.addChild(playerSnake);
   stage.addChild(snok);
+  stage.addChild(rectangle);
 
   initializeControls();
 
@@ -55,6 +65,13 @@ function play() {
 
   snok.x += snok.vx;
   snok.y += snok.vy;
+
+  if (hitTestRectangle(playerSnake, rectangle)) {
+    rectangle.tint = 0x66CCFF;
+  }
+  else {
+    rectangle.tint = 0xFF3300;
+  }
 }
 
 function loadProgressHandler(loader, resource) {

@@ -1,6 +1,7 @@
 //Pixi Aliases
 var Container = PIXI.Container;
 var autoDetectRenderer = PIXI.autoDetectRenderer;
+var Graphics = PIXI.Graphics;
 var loader = PIXI.loader;
 var resources = PIXI.loader.resources;
 var TextureCache = PIXI.utils.TextureCache;
@@ -17,6 +18,7 @@ var stage = new Container();
 var playerSnake;
 var playerSpeed = 5;
 var snok;
+var rectangle;
 
 //controls
 var left;
