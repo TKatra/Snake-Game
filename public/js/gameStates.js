@@ -1,11 +1,6 @@
 function play() {
-  snok.vx = -1;
-
   playerSnake.x += playerSnake.vx;
   playerSnake.y += playerSnake.vy;
-
-  snok.x += snok.vx;
-  snok.y += snok.vy;
 
   if (hitTestRectangle(playerSnake, topBorder)) {
     console.log("hit topBorder!");
@@ -20,12 +15,10 @@ function play() {
     console.log("hit leftBorder!");
   }
 
-  if (hitTestRectangle(playerSnake, rectangle)) {
-    rectangle.tint = 0x66CCFF;
-    console.log("hit!");
-  }
-  else {
-    rectangle.tint = 0xFF3300;
+  if (hitTestRectangle(playerSnake, food)) {
+    points += 100;
+    console.log("hit food!");
+    placeFood();
   }
 }
 

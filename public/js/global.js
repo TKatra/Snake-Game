@@ -20,12 +20,16 @@ var gameOver = new Container();
 var playerSnake;
 var playerSpeed = 5;
 var snok;
+var food;
+var foodMargin = 25;
+var maxFoodX;
+var maxFoodY;
+var points = 0;
+
 var topBorder;
 var leftBorder;
 var rightBorder;
 var bottomBorder;
-
-var rectangle;
 
 //controls
 var left;
