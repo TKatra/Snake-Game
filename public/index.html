@@ -18,14 +18,25 @@
     <!-- endinject -->
 
     <!-- inject:js -->
+    <script src="js/border.js"></script>
     <script src="js/controls.js"></script>
+    <script src="js/gameStates.js"></script>
     <script src="js/global.js"></script>
     <script src="js/hitTestRectangle.js"></script>
     <script src="js/keyboard.js"></script>
+    <script src="js/miscFunctions.js"></script>
     <script src="js/startup.js"></script>
     <!-- endinject -->
   </head>
   <body>
+    <section class="game-area">
+
+    </section>
     
+    <footer>
+      <div class="turn-button left" onmousedown="turnSnake('left')"></div>
+      <div class="score-area"></div>
+      <div class="turn-button right" onmousedown="turnSnake('right')"></div>
+    </footer>
   </body>
 </html>

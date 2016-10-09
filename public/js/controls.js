@@ -3,6 +3,16 @@ function initializeControls() {
   right = keyboard(39);
 
   left.press = function() {
+    turnSnake("left");
+  }
+
+  right.press = function() {
+    turnSnake("right");
+  }
+}
+
+function turnSnake(direction) {
+  if (direction === "left") {
     //goes right, turns to up
     if (playerSnake.vx > 0) {
       playerSnake.vx = 0;
@@ -24,8 +34,7 @@ function initializeControls() {
       playerSnake.vy = 0;
     }
   }
-
-  right.press = function() {
+  else if (direction === "right") {
     //goes right, turns to down
     if (playerSnake.vx > 0) {
       playerSnake.vx = 0;

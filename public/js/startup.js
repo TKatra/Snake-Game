@@ -1,7 +1,10 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  document.body.appendChild(renderer.view);
+  gameArea = document.getElementsByClassName("game-area")[0];
+  renderer = autoDetectRenderer(Math.floor(gameArea.offsetWidth), Math.floor(gameArea.offsetHeight));
+  gameArea.appendChild(renderer.view);
 
-  renderer.view.style.border = "1px dashed black";
+  window.addEventListener("resize", resizeRenderer);
+
   renderer.backgroundColor = 0x061639;
 
   loader
@@ -25,6 +28,8 @@ function setup() {
   playerSnake.vy = 0;
   snok.vx = 0;
   snok.vy = 0;
+
+  createBorders();
 
   rectangle = new Graphics();
   rectangle.beginFill(0x66CCFF, 0.5);
@@ -51,30 +56,4 @@ function gameLoop() {
   state();
 
   renderer.render(stage);
-}
-
-function play() {
-  // playerSnake.vx = 1;
-  // playerSnake.vy = 0.5;
-
-  snok.vx = -1;
-  // snok.vy = 0.5;
-
-  playerSnake.x += playerSnake.vx;
-  playerSnake.y += playerSnake.vy;
-
-  snok.x += snok.vx;
-  snok.y += snok.vy;
-
-  if (hitTestRectangle(playerSnake, rectangle)) {
-    rectangle.tint = 0x66CCFF;
-  }
-  else {
-    rectangle.tint = 0xFF3300;
-  }
-}
-
-function loadProgressHandler(loader, resource) {
-  console.log("Loading: " + resource.url);
-  console.log("Progress: " + loader.progress + "%");
 }
