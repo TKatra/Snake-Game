@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function setup() {
   console.log("Files loaded!");
-  spriteSheet = resources["assets/images/snake-game.json"].textures; 
+  spriteSheet = resources["assets/images/snake-game.json"].textures;
 
   createPlayerSnake();
   createBorders();

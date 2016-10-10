@@ -17,21 +17,25 @@ function turnSnake(direction) {
     if (playerSnake.vx > 0) {
       playerSnake.vx = 0;
       playerSnake.vy = -playerSpeed;
+      playerSnake.texture = spriteSheet["Snek up.png"];
     }
     //goes up, turns to left
     else if(playerSnake.vy < 0) {
       playerSnake.vx = -playerSpeed;
       playerSnake.vy = 0;
+      playerSnake.texture = spriteSheet["Snek left.png"];
     }
     //goes left, turns to down
     else if(playerSnake.vx < 0) {
       playerSnake.vx = 0;
       playerSnake.vy = playerSpeed;
+      playerSnake.texture = spriteSheet["Snek down.png"];
     }
     //goes down, turns to right
     else if(playerSnake.vy > 0) {
       playerSnake.vx = playerSpeed;
       playerSnake.vy = 0;
+      playerSnake.texture = spriteSheet["Snek right.png"];
     }
   }
   else if (direction === "right") {
@@ -39,21 +43,25 @@ function turnSnake(direction) {
     if (playerSnake.vx > 0) {
       playerSnake.vx = 0;
       playerSnake.vy = playerSpeed;
+      playerSnake.texture = spriteSheet["Snek down.png"];
     }
     //goes down, turns to left
     else if(playerSnake.vy > 0) {
       playerSnake.vx = -playerSpeed;
       playerSnake.vy = 0;
+      playerSnake.texture = spriteSheet["Snek left.png"];
     }
     //goes left, turns to up
     else if(playerSnake.vx < 0) {
       playerSnake.vx = 0;
       playerSnake.vy = -playerSpeed;
+      playerSnake.texture = spriteSheet["Snek up.png"];
     }
     //goes up, turns to right
     else if(playerSnake.vy < 0) {
       playerSnake.vx = playerSpeed;
       playerSnake.vy = 0;
+      playerSnake.texture = spriteSheet["Snek right.png"];
     }
   }
 }

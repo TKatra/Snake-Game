@@ -1,5 +1,5 @@
 function createPlayerSnake() {
-  playerSnake = new Sprite(spriteSheet["Snek.png"]);
+  playerSnake = new Sprite(spriteSheet["Snek right.png"]);
   // playerSnake.scale.set(0.5, 0.5);
   playerSnake.width = 20;
   playerSnake.height = 20;

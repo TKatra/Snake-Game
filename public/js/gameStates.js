@@ -20,21 +20,26 @@ function play() {
   for (var i = 5; i < playerTail.length; i++) {
     if (hitTestRectangle(playerSnake, playerTail[i])) {
       console.log("hit tail!");
+      state = end;
       break;
     }
   }
 
   if (hitTestRectangle(playerSnake, topBorder)) {
     console.log("hit topBorder!");
+    state = end;
   }
   if (hitTestRectangle(playerSnake, rightBorder)) {
     console.log("hit rightBorder!");
+    state = end;
   }
   if (hitTestRectangle(playerSnake, bottomBorder)) {
     console.log("hit bottomBorder!");
+    state = end;
   }
   if (hitTestRectangle(playerSnake, leftBorder)) {
     console.log("hit leftBorder!");
+    state = end;
   }
 
   if (hitTestRectangle(playerSnake, food)) {
@@ -46,5 +51,9 @@ function play() {
 }
 
 function end() {
-  
+  console.log("Game Over");
+}
+
+function start() {
+  console.log("Start");
 }
