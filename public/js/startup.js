@@ -6,9 +6,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
   maxFoodX = Math.floor(gameArea.offsetWidth) - foodMargin;
   maxFoodY = Math.floor(gameArea.offsetHeight) - foodMargin;
 
+  document.getElementsByClassName("high-score-display")[0].innerHTML = highScore;
+
   window.addEventListener("resize", resizeRenderer);
 
-  renderer.backgroundColor = 0x061639;
+  renderer.backgroundColor = 0xabe6e4;
 
   loader
     .add("assets/images/snake-game.json")
@@ -20,16 +22,25 @@ function setup() {
   console.log("Files loaded!");
   spriteSheet = resources["assets/images/snake-game.json"].textures;
 
+  gameOverImage = new Sprite(spriteSheet["game over.png"]);
+  gameOverImage.x = Math.floor(gameArea.offsetWidth / 2 - (gameOverImage.width / 2));
+  gameOverImage.y = Math.floor((gameArea.offsetHeight / 2) - (gameOverImage.height / 2));
+  gameOverScreen.addChild(gameOverImage);
+  gameOverScreen.visible = false;
+
   createPlayerSnake();
   createBorders();
   createFood();
+
   points = 0;
   document.getElementsByClassName("score-display")[0].innerHTML = points;
-  document.getElementsByClassName("high-score-display")[0].innerHTML = highScore;
+  
 
   stage.addChild(stageBackground);
   stage.addChild(playerSnake);
   stage.addChild(food);
+  stage.addChild(gameOverScreen);
+
   initializeControls();
 
   state = play;

@@ -43,7 +43,8 @@ function play() {
 }
 
 function end() {
-  console.log("Game Over");
+  // console.log("Game Over");
+  gameOverScreen.visible = true;
 }
 
 function start() {
