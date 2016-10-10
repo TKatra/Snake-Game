@@ -14,12 +14,16 @@ var state;
 var gameArea;
 var renderer;
 var stage = new Container();
+var stageBackground = new Container();
 var gameOver = new Container();
+var tailFrameTick = 0;
 
 //Gameplay
 var playerSnake;
 var playerSpeed = 5;
-var snok;
+var playerTail = [];
+var playerMaxLength = 5;
+
 var food;
 var foodMargin = 25;
 var maxFoodX;

@@ -24,6 +24,7 @@ function setup() {
   createBorders();
   createFood();
 
+  stage.addChild(stageBackground);
   stage.addChild(playerSnake);
   stage.addChild(food);
   initializeControls();
