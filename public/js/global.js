@@ -28,7 +28,8 @@ var food;
 var foodMargin = 25;
 var maxFoodX;
 var maxFoodY;
-var points = 0;
+var highScore = 1500;
+var points;
 
 var topBorder;
 var leftBorder;

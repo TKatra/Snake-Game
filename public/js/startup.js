@@ -23,6 +23,9 @@ function setup() {
   createPlayerSnake();
   createBorders();
   createFood();
+  points = 0;
+  document.getElementsByClassName("score-display")[0].innerHTML = points;
+  document.getElementsByClassName("high-score-display")[0].innerHTML = highScore;
 
   stage.addChild(stageBackground);
   stage.addChild(playerSnake);

@@ -8,6 +8,18 @@ function createFood() {
   food.endFill();
 }
 
+function eatFood() {
+  placeFood();
+  points += 100;
+  playerMaxLength += 1;
+  document.getElementsByClassName("score-display")[0].innerHTML = points;
+
+  if (points > highScore) {
+    highScore = points;
+    document.getElementsByClassName("high-score-display")[0].innerHTML = highScore;
+  }
+}
+
 function placeFood() {
   food.x = getRandomInt(foodMargin, maxFoodX);
   food.y = getRandomInt(foodMargin, maxFoodY);
