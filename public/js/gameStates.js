@@ -14,8 +14,8 @@ function play() {
 }
 
 function end() {
-  playerSnake.texture = spriteSheet["impact.png"];
   currentState = "endState";
+  playerSnake.texture = spriteSheet["impact.png"];
   gameOverScreen.visible = true;
 }
 
