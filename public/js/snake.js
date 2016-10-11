@@ -57,7 +57,7 @@ function createTailPart() {
 }
 
 function tailCollisionCheck() {
-  //Skip checking the first 5 to be able to turn the snake
+  //Skip checking the first tail parts to be able to turn
   //without colliding with the tail instantly
   for (var i = 5; i < playerTail.length; i++) {
     if (hitTestRectangle(playerSnake, playerTail[i])) {
