@@ -2,7 +2,7 @@
 
 "game over.png":
 {
-	"frame": {"x":0,"y":0,"w":258,"h":223},
+	"frame": {"x":100,"y":100,"w":258,"h":223},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":258,"h":223},
@@ -11,7 +11,7 @@
 },
 "impact.png":
 {
-	"frame": {"x":258,"y":0,"w":100,"h":100},
+	"frame": {"x":0,"y":0,"w":100,"h":100},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
@@ -20,16 +20,7 @@
 },
 "Snek down.png":
 {
-	"frame": {"x":358,"y":0,"w":100,"h":100},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
-	"sourceSize": {"w":100,"h":100},
-	"pivot": {"x":0.5,"y":0.5}
-},
-"Snek left nom.png":
-{
-	"frame": {"x":0,"y":223,"w":100,"h":100},
+	"frame": {"x":300,"y":0,"w":100,"h":100},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
@@ -38,16 +29,7 @@
 },
 "Snek left.png":
 {
-	"frame": {"x":100,"y":223,"w":100,"h":100},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
-	"sourceSize": {"w":100,"h":100},
-	"pivot": {"x":0.5,"y":0.5}
-},
-"Snek right nom.png":
-{
-	"frame": {"x":200,"y":223,"w":100,"h":100},
+	"frame": {"x":0,"y":100,"w":100,"h":100},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
@@ -56,7 +38,7 @@
 },
 "Snek right.png":
 {
-	"frame": {"x":300,"y":223,"w":100,"h":100},
+	"frame": {"x":100,"y":0,"w":100,"h":100},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
@@ -65,7 +47,7 @@
 },
 "Snek up.png":
 {
-	"frame": {"x":0,"y":323,"w":100,"h":100},
+	"frame": {"x":200,"y":0,"w":100,"h":100},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
@@ -74,7 +56,7 @@
 },
 "start.png":
 {
-	"frame": {"x":100,"y":323,"w":312,"h":265},
+	"frame": {"x":0,"y":323,"w":312,"h":265},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":312,"h":265},
@@ -86,8 +68,8 @@
 	"version": "1.0",
 	"image": "snake-game.png",
 	"format": "RGBA8888",
-	"size": {"w":458,"h":588},
+	"size": {"w":400,"h":588},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:8ff6e605ee2e146dd3d4a4e31ff693c5:16e1dda9eafa70946f265ebf024ad1fe:918c73e177e0e66b4fc5d155a68a4e95$"
+	"smartupdate": "$TexturePacker:SmartUpdate:c0ed7a02ec7766b60306d5d208d6a34c:35e354903b70b139cbf3aec8954df61a:918c73e177e0e66b4fc5d155a68a4e95$"
 }
 }
