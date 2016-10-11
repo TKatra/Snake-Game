@@ -2,8 +2,7 @@ function resizeRenderer() {
   renderer.resize(Math.floor(gameArea.offsetWidth), Math.floor(gameArea.offsetHeight));
   createBorders();
   
-  maxFoodX = Math.floor(gameArea.offsetWidth) - foodMargin;
-  maxFoodY = Math.floor(gameArea.offsetHeight) - foodMargin;
+  setFoodLimits();
 
   gameOverImage.x = Math.floor(gameArea.offsetWidth / 2 - (gameOverImage.width / 2));
   gameOverImage.y = Math.floor((gameArea.offsetHeight / 2) - (gameOverImage.height / 2));

@@ -26,6 +26,11 @@ function foodCollisionCheck() {
   }
 }
 
+function setFoodLimits() {
+  maxFoodX = Math.floor(gameArea.offsetWidth) - foodMargin;
+  maxFoodY = Math.floor(gameArea.offsetHeight) - foodMargin;
+}
+
 function placeFood() {
   food.x = getRandomInt(foodMargin, maxFoodX);
   food.y = getRandomInt(foodMargin, maxFoodY);

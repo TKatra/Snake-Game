@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   renderer = autoDetectRenderer(Math.floor(gameArea.offsetWidth), Math.floor(gameArea.offsetHeight));
   gameArea.appendChild(renderer.view);
   
-  maxFoodX = Math.floor(gameArea.offsetWidth) - foodMargin;
-  maxFoodY = Math.floor(gameArea.offsetHeight) - foodMargin;
+  setFoodLimits();
 
   document.getElementsByClassName("high-score-display")[0].innerHTML = highScore;
 
