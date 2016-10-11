@@ -20,3 +20,22 @@ function createTailPart() {
 
   return tailPart;
 }
+
+function resetPlayerSnake() {
+  for (var i = playerTail.length - 1; i >= 0; i--) {
+    stageBackground.removeChild(playerTail[i]);
+    playerTail.pop();
+  }
+
+  playerSnake.width = 20;
+  playerSnake.height = 20;
+  playerSnake.texture = spriteSheet["Snek right.png"];
+  playerSnake.x = 0;
+  playerSnake.y = 0;
+  playerSnake.vx = playerSpeed;
+  playerSnake.vy = 0;
+
+  playerTail = [];
+  playerMaxLength = 5;
+  tailFrameTick = 0;
+}

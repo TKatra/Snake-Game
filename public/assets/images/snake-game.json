@@ -9,7 +9,7 @@
 	"sourceSize": {"w":258,"h":223},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"Snek down.png":
+"impact.png":
 {
 	"frame": {"x":258,"y":0,"w":100,"h":100},
 	"rotated": false,
@@ -18,7 +18,16 @@
 	"sourceSize": {"w":100,"h":100},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"Snek left.png":
+"Snek down.png":
+{
+	"frame": {"x":358,"y":0,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Snek left nom.png":
 {
 	"frame": {"x":0,"y":223,"w":100,"h":100},
 	"rotated": false,
@@ -27,7 +36,7 @@
 	"sourceSize": {"w":100,"h":100},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"Snek right.png":
+"Snek left.png":
 {
 	"frame": {"x":100,"y":223,"w":100,"h":100},
 	"rotated": false,
@@ -36,7 +45,7 @@
 	"sourceSize": {"w":100,"h":100},
 	"pivot": {"x":0.5,"y":0.5}
 },
-"Snek up.png":
+"Snek right nom.png":
 {
 	"frame": {"x":200,"y":223,"w":100,"h":100},
 	"rotated": false,
@@ -44,14 +53,41 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
 	"sourceSize": {"w":100,"h":100},
 	"pivot": {"x":0.5,"y":0.5}
+},
+"Snek right.png":
+{
+	"frame": {"x":300,"y":223,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Snek up.png":
+{
+	"frame": {"x":0,"y":323,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"start.png":
+{
+	"frame": {"x":100,"y":323,"w":312,"h":265},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":312,"h":265},
+	"sourceSize": {"w":312,"h":265},
+	"pivot": {"x":0.5,"y":0.5}
 }},
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
 	"image": "snake-game.png",
 	"format": "RGBA8888",
-	"size": {"w":358,"h":323},
+	"size": {"w":458,"h":588},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:c7e96acadefe373a8e595ef663c18021:35a846f40cde88483dd75973c98a64f3:918c73e177e0e66b4fc5d155a68a4e95$"
+	"smartupdate": "$TexturePacker:SmartUpdate:8ff6e605ee2e146dd3d4a4e31ff693c5:16e1dda9eafa70946f265ebf024ad1fe:918c73e177e0e66b4fc5d155a68a4e95$"
 }
 }

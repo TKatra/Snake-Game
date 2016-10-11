@@ -1,4 +1,7 @@
 function play() {
+  currentState = "playState";
+  startScreen.visible = false;
+
   playerSnake.x += playerSnake.vx;
   playerSnake.y += playerSnake.vy;
 
@@ -43,10 +46,12 @@ function play() {
 }
 
 function end() {
-  // console.log("Game Over");
+  playerSnake.texture = spriteSheet["impact.png"];
+  currentState = "endState";
   gameOverScreen.visible = true;
 }
 
 function start() {
-  console.log("Start");
+  currentState = "startState";
+  startScreen.visible = true;
 }

@@ -22,6 +22,12 @@ function setup() {
   console.log("Files loaded!");
   spriteSheet = resources["assets/images/snake-game.json"].textures;
 
+  startImage = new Sprite(spriteSheet["start.png"]);
+  startImage.x = Math.floor(gameArea.offsetWidth / 2 - (startImage.width / 2));
+  startImage.y = Math.floor((gameArea.offsetHeight / 2) - (startImage.height / 2));
+  startScreen.addChild(startImage);
+  startScreen.visible = false;
+
   gameOverImage = new Sprite(spriteSheet["game over.png"]);
   gameOverImage.x = Math.floor(gameArea.offsetWidth / 2 - (gameOverImage.width / 2));
   gameOverImage.y = Math.floor((gameArea.offsetHeight / 2) - (gameOverImage.height / 2));
@@ -32,20 +38,31 @@ function setup() {
   createBorders();
   createFood();
 
-  points = 0;
-  document.getElementsByClassName("score-display")[0].innerHTML = points;
-  
+  resetPoints();
 
   stage.addChild(stageBackground);
   stage.addChild(playerSnake);
   stage.addChild(food);
+  stage.addChild(startScreen);
   stage.addChild(gameOverScreen);
 
   initializeControls();
 
-  state = play;
+  state = start;
 
   gameLoop();
+}
+
+function reset() {
+  gameOverScreen.visible = false;
+
+  resetPlayerSnake()
+  placeFood();
+  resetPoints();
+
+  state = play;
+
+  // gameLoop();
 }
 
 function gameLoop() {

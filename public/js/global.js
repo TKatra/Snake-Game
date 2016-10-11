@@ -9,6 +9,7 @@ var Texture = PIXI.Texture;
 var Sprite = PIXI.Sprite;
 var spriteSheet;
 var state;
+var currentState;
 
 //Foundation
 var gameArea;
@@ -16,6 +17,7 @@ var renderer;
 var stage = new Container();
 var stageBackground = new Container();
 var startScreen = new Container();
+var startImage;
 var gameOverScreen = new Container();
 var gameOverImage;
 

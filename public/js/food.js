@@ -24,3 +24,8 @@ function placeFood() {
   food.x = getRandomInt(foodMargin, maxFoodX);
   food.y = getRandomInt(foodMargin, maxFoodY);
 }
+
+function resetPoints() {
+  points = 0;
+  document.getElementsByClassName("score-display")[0].innerHTML = points;
+}
