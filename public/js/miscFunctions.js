@@ -7,6 +7,9 @@ function resizeRenderer() {
 
   gameOverImage.x = Math.floor(gameArea.offsetWidth / 2 - (gameOverImage.width / 2));
   gameOverImage.y = Math.floor((gameArea.offsetHeight / 2) - (gameOverImage.height / 2));
+
+  startImage.x = Math.floor(gameArea.offsetWidth / 2 - (startImage.width / 2));
+  startImage.y = Math.floor((gameArea.offsetHeight / 2) - (startImage.height / 2));
 }
 
 function getRandomInt(min, max) {
