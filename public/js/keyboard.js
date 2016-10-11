@@ -1,3 +1,5 @@
+//Credits to kittykatattack for this code
+//and their excellent tutorial on PIXI!
 function keyboard(keyCode) {
   var key = {};
   key.code = keyCode;

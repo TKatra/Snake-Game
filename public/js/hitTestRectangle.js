@@ -1,3 +1,5 @@
+//Credits to kittykatattack for this code
+//and their excellent tutorial on PIXI!
 function hitTestRectangle(r1, r2) {
 
   //Define the variables we'll need to calculate
