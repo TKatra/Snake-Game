@@ -14,12 +14,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   loader
     .add("assets/images/snake-game.json")
-    .on("progress", loadProgressHandler)
     .load(setup);
 });
 
 function setup() {
-  console.log("Files loaded!");
   spriteSheet = resources["assets/images/snake-game.json"].textures;
 
   startImage = new Sprite(spriteSheet["start.png"]);
@@ -61,8 +59,6 @@ function reset() {
   resetPoints();
 
   state = play;
-
-  // gameLoop();
 }
 
 function gameLoop() {
