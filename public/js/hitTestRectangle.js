@@ -1,5 +1,6 @@
 //Credits to kittykatattack for this code
 //and their excellent tutorial on PIXI!
+//https://github.com/kittykatattack/learningPixi#collision-detection
 function hitTestRectangle(r1, r2) {
 
   //Define the variables we'll need to calculate

@@ -1,5 +1,6 @@
 //Credits to kittykatattack for this code
 //and their excellent tutorial on PIXI!
+//https://github.com/kittykatattack/learningPixi#keyboard-movement
 function keyboard(keyCode) {
   var key = {};
   key.code = keyCode;
