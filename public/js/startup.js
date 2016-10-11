@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+
   gameArea = document.getElementsByClassName("game-area")[0];
   renderer = autoDetectRenderer(Math.floor(gameArea.offsetWidth), Math.floor(gameArea.offsetHeight));
   gameArea.appendChild(renderer.view);
@@ -20,17 +21,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 function setup() {
   spriteSheet = resources["assets/images/snake-game.json"].textures;
 
-  startImage = new Sprite(spriteSheet["start.png"]);
-  startImage.x = Math.floor(gameArea.offsetWidth / 2 - (startImage.width / 2));
-  startImage.y = Math.floor((gameArea.offsetHeight / 2) - (startImage.height / 2));
-  startScreen.addChild(startImage);
-  startScreen.visible = false;
-
-  gameOverImage = new Sprite(spriteSheet["game over.png"]);
-  gameOverImage.x = Math.floor(gameArea.offsetWidth / 2 - (gameOverImage.width / 2));
-  gameOverImage.y = Math.floor((gameArea.offsetHeight / 2) - (gameOverImage.height / 2));
-  gameOverScreen.addChild(gameOverImage);
-  gameOverScreen.visible = false;
+  createStartScreen();
+  createGameOverScreen();
 
   createPlayerSnake();
   createBorders();
@@ -52,8 +44,6 @@ function setup() {
 }
 
 function reset() {
-  gameOverScreen.visible = false;
-
   resetPlayerSnake()
   placeFood();
   resetPoints();

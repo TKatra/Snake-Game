@@ -20,6 +20,12 @@ function eatFood() {
   }
 }
 
+function foodCollisionCheck() {
+  if (hitTestRectangle(playerSnake, food)) {
+    eatFood();
+  }
+}
+
 function placeFood() {
   food.x = getRandomInt(foodMargin, maxFoodX);
   food.y = getRandomInt(foodMargin, maxFoodY);

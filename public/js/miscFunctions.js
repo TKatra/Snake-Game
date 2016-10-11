@@ -15,3 +15,19 @@ function resizeRenderer() {
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+function createStartScreen() {
+  startImage = new Sprite(spriteSheet["start.png"]);
+  startImage.x = Math.floor(gameArea.offsetWidth / 2 - (startImage.width / 2));
+  startImage.y = Math.floor((gameArea.offsetHeight / 2) - (startImage.height / 2));
+  startScreen.addChild(startImage);
+  startScreen.visible = false;
+}
+
+function createGameOverScreen() {
+  gameOverImage = new Sprite(spriteSheet["game over.png"]);
+  gameOverImage.x = Math.floor(gameArea.offsetWidth / 2 - (gameOverImage.width / 2));
+  gameOverImage.y = Math.floor((gameArea.offsetHeight / 2) - (gameOverImage.height / 2));
+  gameOverScreen.addChild(gameOverImage);
+  gameOverScreen.visible = false;
+}

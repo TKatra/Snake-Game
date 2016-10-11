@@ -23,3 +23,18 @@ function createBorders() {
   leftBorder.x = 0;
   leftBorder.y = 0;
 }
+
+function borderCollisionCheck() {
+  if (hitTestRectangle(playerSnake, topBorder)) {
+    state = end;
+  }
+  if (hitTestRectangle(playerSnake, rightBorder)) {
+    state = end;
+  }
+  if (hitTestRectangle(playerSnake, bottomBorder)) {
+    state = end;
+  }
+  if (hitTestRectangle(playerSnake, leftBorder)) {
+    state = end;
+  }
+}
